@@ -1,0 +1,11 @@
+.TrackList{
+    display: flex;
+    justify-content: space-between;
+}
+.TrackListPart{
+    max-width: 501px;
+    @media(max-width: 1685px) {
+        max-width: none;
+    }
+    width: 100%;
+}

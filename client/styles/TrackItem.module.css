@@ -1,0 +1,133 @@
+.TrackItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+  max-width: 541px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 5px;
+  transition: all 0.2s;
+}
+.TrackItem:hover {
+  border-radius: 10px;
+  background: rgb(235, 237, 238);
+}
+
+.Track_info {
+  display: flex;
+  align-items: center;
+}
+
+.TrackItem__avatar_cont {
+  height: 41px;
+  width: 41px;
+  border-radius: 5px;
+}
+.TrackItem__avatar_cont img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.TrackItem__Headlines {
+  margin-left: 12px;
+}
+.TrackItem__Headlines h2 {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0px;
+}
+.TrackItem__Headlines h3 {
+  color: rgb(155, 155, 155);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+  margin-top: 2px;
+}
+
+.TrackItem__iconsAndTIme {
+  display: flex;
+  align-items: center;
+}
+.TrackItem__iconsAndTIme__icons {
+  display: flex;
+  align-items: center;
+}
+.TrackItem__iconsAndTIme__icons .TrackItem_like_icon {
+  cursor: pointer;
+  background: url("../public/images/MainPage/Tracks/black-like-icon.png") no-repeat center center/cover;
+  height: 17px;
+  width: 17px;
+  transition: all 0.3s;
+  margin-left: 21px;
+}
+.TrackItem__iconsAndTIme__icons .TrackItem_like_icon:hover {
+  background: url("../public/images/MainPage/Tracks/like-icon.png");
+}
+.TrackItem__iconsAndTIme__icons .TrackItem_like_icon_active {
+  cursor: pointer;
+  background: url("../public/images/MainPage/Tracks/fill-like-icon.png") no-repeat center center/cover;
+  height: 17px;
+  width: 17px;
+  transition: all 0.3s;
+  margin-left: 21px;
+}
+.TrackItem__iconsAndTIme__time {
+  color: rgb(125, 125, 125);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0px;
+  margin-left: 27px;
+}
+
+.TrackItem_add_icon {
+  position: relative;
+  cursor: pointer;
+}
+.TrackItem_add_icon:hover span {
+  display: block;
+  width: 15px;
+  height: 3px;
+  border-radius: 30px;
+  background: rgb(114, 194, 224);
+  transition: all 0.3s;
+}
+.TrackItem_add_icon:hover .span_two {
+  display: block;
+  width: 15px;
+  height: 3px;
+  border-radius: 30px;
+  background: rgb(114, 194, 224);
+  transform: rotate(90deg) translateX(-3px);
+}
+.TrackItem_add_icon span {
+  display: block;
+  cursor: pointer;
+  width: 15px;
+  height: 3px;
+  border-radius: 30px;
+  background: rgb(46, 45, 45);
+  transition: all 0.3s;
+}
+.TrackItem_add_icon .span_two {
+  cursor: pointer;
+  display: block;
+  width: 15px;
+  height: 3px;
+  border-radius: 30px;
+  background: rgb(46, 45, 45);
+  transform: rotate(90deg) translateX(-3px);
+}/*# sourceMappingURL=TrackItem.module.css.map */
