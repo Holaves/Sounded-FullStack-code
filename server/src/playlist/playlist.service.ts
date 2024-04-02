@@ -15,7 +15,7 @@ export class PlaylistService {
 
     async create(dto: CreatePlaylistDto, picture): Promise<Playlist>{
         const picturePath = this.fileService.createFile(FileType.IMAGE, picture)
-        const album = await this.playlistModel.create({...dto, picture: picturePath})
+        const album = await this.playlistModel.create({...dto, picture: picturePath, likes: 0, visibale: false})
 
         return album;
     }
@@ -56,5 +56,20 @@ export class PlaylistService {
     async delete(id: ObjectId) {
         const playlist = await this.playlistModel.findByIdAndDelete(id)
         return playlist._id;
+    }
+    async changeVisible(id: ObjectId) {
+        const playlist = await this.playlistModel.findById(id)
+        playlist.visibale = !playlist.visibale
+        await playlist.save()
+    }
+    async addLike(id: ObjectId) {
+        const playlist = await this.playlistModel.findById(id)
+        playlist.likes++
+        playlist.save()
+    }
+    async deleteLike(id: ObjectId) {
+        const playlist = await this.playlistModel.findById(id)
+        playlist.likes--
+        playlist.save()
     }
 }

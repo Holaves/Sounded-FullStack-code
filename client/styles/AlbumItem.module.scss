@@ -1,0 +1,86 @@
+.AlbumItem{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(212, 225, 254);
+    border-radius: 10px;
+    height: 188px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover{
+        border: 1px solid rgb(138, 166, 226);
+        transition: all 0.3s;
+        .AlbumItem__imgCont{
+            transition: all 0.3s;
+            border: 1px solid rgb(138, 166, 226);
+        }
+
+    }
+    &__imgCont{
+        border-radius: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -20px;
+        transition: all 0.3s;
+        width: 76px;
+        height: 76px;
+        border: 1px solid rgb(212, 225, 254);
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 100%;
+        }
+    }
+    &__names{
+        margin-top: 70px;
+        h1{
+            color: rgb(0, 0, 0);
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            text-align: center;
+        }
+        h2{
+            color: rgb(155, 155, 155);
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 3px;
+        }
+    }
+    &__bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 40px;
+        p{
+            color: rgb(3, 3, 3);
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+        }
+        &__arrow_icon{
+            background: url('../public/images/Generalis/seeAll-icon.svg') no-repeat center center / cover;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+.UnnamedAlbum__plus_icon{
+    background: url("../public/images/Generalis/plus-icon.png") no-repeat center center / cover;
+    width: 23px;
+    height: 23px;
+}

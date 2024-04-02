@@ -14,6 +14,12 @@ export class Playlist {
     author: string;
 
     @Prop()
+    visibale: boolean;
+
+    @Prop()
+    likes: number;
+
+    @Prop()
     picture: string;
 
     @Prop({type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Track'}]})

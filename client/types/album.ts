@@ -1,6 +1,7 @@
 import { ITrack } from "./track";
 
 export interface IAlbum {
+    _id: string;
     name: string;
     artist: string;
     likes: number;

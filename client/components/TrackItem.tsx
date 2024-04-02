@@ -2,6 +2,7 @@ import { ITrack } from '@/types/track';
 import React, { useState } from 'react';
 import styles from '../styles/TrackItem.module.scss'
 import { AppURL } from '@/layouts/MainLayout';
+import { useTypedSelector } from '@/hooks/useTypedSelector';
 
 interface TrackItemProps {
     track: ITrack;
@@ -10,6 +11,7 @@ interface TrackItemProps {
 
 const TrackItem: React.FC<TrackItemProps>  = ({track, stylesMaxWidth}) => {
     const [isAddLike, setIsAddLike] = useState <boolean>(false)
+    const {width} = useTypedSelector(state => state.size)
 
     const addLike = () => {
         if(isAddLike === false){
@@ -21,8 +23,14 @@ const TrackItem: React.FC<TrackItemProps>  = ({track, stylesMaxWidth}) => {
             // request, -like
         }
     }
+    const getTrackItemWidth = (): number => {
+        if(width < 1100) {
+            return 450;
+        }
+        return 542
+    }
    return(
-       <div className={styles.TrackItem} style={{maxWidth: stylesMaxWidth ? stylesMaxWidth : 542}}>
+       <div className={styles.TrackItem} style={{maxWidth: stylesMaxWidth ? stylesMaxWidth : getTrackItemWidth()}}>
             <div className={styles.Track_info}>
                 <div className={styles.TrackItem__avatar_cont}>
                     {/* Alt зависит от Темы */}

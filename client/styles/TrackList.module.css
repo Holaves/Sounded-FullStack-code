@@ -1,14 +1,15 @@
 .TrackList {
+  margin-top: 34px;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 1025px) {
+  .TrackList {
+    flex-direction: column;
+  }
 }
 
 .TrackListPart {
   max-width: 501px;
   width: 100%;
-}
-@media (max-width: 1685px) {
-  .TrackListPart {
-    max-width: none;
-  }
 }/*# sourceMappingURL=TrackList.module.css.map */

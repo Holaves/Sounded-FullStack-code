@@ -1,11 +1,15 @@
 .TrackList{
+    margin-top: 34px;
     display: flex;
     justify-content: space-between;
+    @media(max-width:1025px) {
+        flex-direction: column;
+    }
 }
 .TrackListPart{
     max-width: 501px;
     @media(max-width: 1685px) {
-        max-width: none;
+        max-width: null;
     }
     width: 100%;
 }

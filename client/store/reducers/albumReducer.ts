@@ -1,5 +1,4 @@
 import { AlbumAction, AlbumActionTypes, AlbumState } from "@/types/album"
-import { PlaylistAction, PlaylistActionTypes, PlaylistState } from "@/types/playlist"
 
 
 const initialState: AlbumState  = {

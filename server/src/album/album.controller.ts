@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post, Query, UploadedFiles, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Query, UploadedFiles, UseInterceptors } from '@nestjs/common';
 import { AlbumService } from './album.service';
 import { ObjectId } from 'mongoose';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
@@ -19,7 +19,7 @@ export class AlbumController {
         return this.albumService.getOne(id)
     }
 
-    @Post('/like')
+    @Put('/like')
     listen(@Param('id') id: ObjectId) {
         return this.albumService.like(id)
     }

@@ -7,6 +7,7 @@ import { ServeStaticModule } from "@nestjs/serve-static";
 import { AlbumModule } from './album/album.module';
 import { PlaylistService } from './playlist/playlist.service';
 import { PlaylistModule } from './playlist/playlist.module';
+import { UsersModule } from './users/users.module';
 import * as path from 'path'
 
 
@@ -20,7 +21,8 @@ import * as path from 'path'
     TrackModule,
     FileModule,
     AlbumModule,
-    PlaylistModule
+    PlaylistModule,
+    UsersModule
   ],
   providers: []
 })

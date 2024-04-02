@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post, UploadedFiles, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, UploadedFiles, UseInterceptors } from '@nestjs/common';
 import { ObjectId } from 'mongoose';
 import { PlaylistService } from './playlist.service';
 import { CreatePlaylistDto } from './dto/create-playlist.dto';
@@ -28,7 +28,20 @@ export class PlaylistController {
         return this.playlistService.create(dto, picture[0])
     }
 
-    @Post('/tracks/:id')
+    @Post('/visible/:id')
+    changeVisible(@Param('id') id: ObjectId){
+        return this.playlistService.changeVisible(id);
+    }
+    @Put('/like/:id')
+    addLike(@Param('id') id: ObjectId){
+        return this.playlistService.addLike(id);
+    }
+    @Delete('/like/:id')
+    deleteLike(@Param('id') id: ObjectId) {
+        return this.playlistService.deleteLike(id);
+    }
+
+    @Put('/tracks/:id')
     addTrack(@Param('id') id: ObjectId, @Body('trackId') trackId: ObjectId) {
         return this.playlistService.addTrack(id, trackId)
     }
